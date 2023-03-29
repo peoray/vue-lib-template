@@ -8,10 +8,10 @@ export default defineConfig({
 		alias: {
 			// we alias to the lib's source files in dev
 			// so we don't need to rebuild the lib over and over again
-			'@linusborg/lib':
+			'@peoray/lib':
 				process.env.NODE_ENV === 'production'
-					? '@linusborg/lib'
-					: '@linusborg/lib/src/index.ts',
+					? '@peoray/lib'
+					: '@peoray/lib/src/index.ts',
 		},
 		dedupe: ['vue'],
 	},
@@ -24,6 +24,6 @@ export default defineConfig({
 		},
 	},
 	optimizeDeps: {
-		exclude: ['@linusborg/lib'],
+		exclude: ['@peoray/lib'],
 	},
 })
